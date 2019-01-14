@@ -13,4 +13,4 @@ Una volta scaricata la repository, per lanciare l'applicazione posizionarsi sopr
 
 -> l'editor si trovera' su localhost:3000
 
-Per ulteriore documentazione, visitare la [il profilo ufficiale](https://github.com/JurassicSWE/) del team JurassicSWE.
+Per ulteriore documentazione, visitare la [il profilo ufficiale](https://github.com/JurassicSWE/) del gruppo con cui ho lavorato.
