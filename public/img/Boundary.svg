@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.65 200.78"><defs>
+<style>.cls-1,.cls-2{fill:none;}.cls-2{stroke:#000;stroke-miterlimit:10;}</style>
+</defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2">
+<g id="Layer_1-2" data-name="Layer 1">
+<circle class="cls-1" cx="132.26" cy="100.39" r="99.89" stroke="black" stroke-width="4" transform="translate(-32.25 122.93) rotate(-45)"/>
+<path d="M132.26,1a99.39,99.39,0,1,1-99.39,99.39A99.5,99.5,0,0,1,132.26,1m0-1A100.39,100.39,0,1,0,232.65,100.39,100.39,100.39,0,0,0,132.26,0Z"/>
+<line class="cls-2" x1="0.5" y1="27.61" x2="0.5" y2="178.19" stroke="black" stroke-width="4"/>
+<line class="cls-2" x1="0.5" y1="100.39" x2="33.13" y2="100.39" stroke="black" stroke-width="4"/></g></g></svg>

@@ -1,0 +1,210 @@
+<!--
+* File: index.html
+* Version: 1.0
+* Type: html
+* Date: 2018-08-16
+* Author: Marco Masiero
+* E-mail: JurassicSWE@gmail.com
+*
+* License: GNU General Public License v3.0
+*
+-->
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>RobustDesigner</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/library/w3.css">
+    <link rel="stylesheet" href="css/library/Montserrat.css">
+    <link rel="stylesheet" href="css/library/bootstrap.min.css">
+    <link rel="stylesheet" href="css/library/joint.min.css">
+</head>
+
+<body>
+
+<!-- TEMPLATE -->
+    <header class=" navbar navbar-header">
+        <h1>RobustDesigner</h1>
+    </header>
+
+    <div class="container">Caricamento...</div>
+
+    <footer>
+      <div class="footer-sx">
+        <span><b>JurassicSWE</b> ©2018</span>
+      </div>
+      <div class="footer-dx">
+        <span>Open-source su  <a href="https://github.com/JurassicSWE" target="_blank"><img src="./img/github.png" alt="Github Logo" height="25"/></a></span>
+      </div>
+    </footer>
+<!-- TEMPLATE -->
+
+<!-- Home Page -->
+  <script type="text/template" name="home">
+
+    <!-- Button -->
+
+    <div class="dialogBtn">
+      <button class="btn btn-success NuovoB btn-lg buttonLeft">Nuovo progetto</button>
+      <button class="btn btn-primary CaricaB btn-lg buttonRight">Carica progetto</button>
+    </div>
+    <!----------->
+
+    <!-- Dialogs -->
+      <div id="newDialog" class="modalNone">
+        <form class="modal-content animate">
+          <div class="container">
+            <label for="uname"><b>Inserisci il nome del nuovo progetto</b></label><br>
+            <input type="text" placeholder="diagramma" name="uname" class="uname" minlength="3" maxlength="15" required>
+            <button type="submit" class="btn btn-success btn-md dialogButton CreaP">Crea</button>
+          </div>
+            <br>
+          <div class="container dialogFooter">
+            <button type="button" class="btn btn-danger btn-md Annulla">Annulla</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="loadDialog" class="modalNone">
+        <form class="modal-content animate">
+          <div class="container">
+            <label for="uname"><b>Carica progetto</b> (.json)</label>
+            <input type="file" id="loadP" name="uname" accept=".json" required>
+            <button type="submit" class="btn btn-success btn-md dialogButton CaricaP">Carica</button>
+          </div>
+
+          <div class="container dialogFooter">
+            <button type="button" class="btn btn-danger btn-md Annulla">Annulla</button>
+          </div>
+        </form>
+      </div>
+    <!------------>
+
+  </script>
+<!-- END Home Page -->
+
+<!-- MENU-->
+  <script type="text/template" name="navMenu">
+
+    <div class="firstLine">
+      <h4><b>Progetto: </b></h4><h4><i><%= project_name %></i></h4>
+      <button type="button" id="esporta" class="btn btn-success pull-right">Esporta</button>
+    </div>
+      <br>
+    <button type="button" id="deleteAll" class="btn btn-danger pull-right">Elimina tutto</button>
+    <button type="button" id="delete" class="btn btn-warning pull-right" disabled="true">Elimina</button>
+    <div class="secondLine">
+      <textarea id="textA" class="pull-left" rows="2" cols="30" maxlength="50" placeholder="descrizione..." disabled="true"></textarea>
+      <button type="button" id="modifica" class="btn btn-info pull-left" disabled="true">Modifica</button>
+    </div>
+
+    <!-- Download dialog -->
+    <div id="esportaDialog" class="modalNone">
+
+      <form class="modal-content animate">
+        <div class="container">
+          <p for="projectN"><b>Progetto</b></p>
+          <input type="text" name="projectN" class="uname" maxlength="15" required>
+           <div id="parent">
+            <div id="wide">
+              <p for="uname"><b>Diagramma (.json)</b></p><br>
+              <button type="button" class="btn btn-success btn-lg center-block scaricaJ">Scarica</button>
+            </div>
+            <div class="vl"></div>
+            <div id="narrow">
+              <p for="uname"><b>Diagramma + Codice (.zip)</b></p><br>
+              <button type="button" class="btn btn-success btn-lg center-block scaricaZ">Scarica</button>
+            </div>
+          </div>
+        </div>
+          <br>
+        <div class="container dialogFooter">
+          <button type="button" class="btn btn-danger btn-md center-block Annulla" style="width:50%">Annulla</button>
+        </div>
+      </form>
+    </div>
+
+  </script>
+<!-- END Menu -->
+
+<!-- DRAG-->
+   <script type="text/template" name="navDrag">
+
+     <span id="spanDrag">
+       <div id="drag"></div>
+     </span>
+
+   </script>
+<!-- END Drag -->
+
+<!-- DROP-->
+   <script type="text/template" name="navDrop">
+
+     <span id="spanDrop">
+       <div id="paper"></div>
+     </span>
+
+     <!-- ENTITY-->
+      <div id="entityDialog" class="modalNone">
+        <form class="modal-content animate">
+          <div class="container">
+            <h4>Attributi Entità: <i class="nomeEnt"></i></h4>
+
+            <button type="button" class="btn btn-success btn-md addAttribute">Aggiungi</button>
+            <!-- <button type="button" id="deleteAttrs" class="btn btn-danger btn-md pull-right">Elimina tutto</button> -->
+
+              <ul id="entityList">
+                <!-- ATRRIBUTE -->
+              </ul>
+
+          </div>
+            <br>
+          <div class="container dialogFooter">
+            <button type="button" class="btn btn-danger btn-md Chiudi">Chiudi</button>
+            <button type="button" class="btn btn-success btn-md pull-right saveAttr">Salva</button>
+          </div>
+        </form>
+      </div>
+     <!-- END Entity -->
+
+   </script>
+<!-- END Drop -->
+
+
+<!-- DEPENDENCIES -->
+  <script src="js/library/jquery.js"></script>
+  <script src="js/library/underscore.js"></script>
+  <script src="js/library/lodash.js"></script>
+  <script src="js/library/backbone.js"></script>
+  <script src="js/library/joint.min.js"></script>
+  <script src="js/library/bootstrap.min.js"></script>
+
+<!-- BACKBONE MODELS -->
+  <script src="js/models/field.js"></script>
+  <script src="js/models/entity.js"></script>
+
+<!-- BACKBONE COLLECTIONS -->
+  <script src="js/collections/fields.js"></script>
+  <script src="js/collections/entities.js"></script>
+
+<!-- BACKBONE VIEWS -->
+  <script src="js/views/index.js"></script>
+  <script src="js/views/editor.js"></script>
+  <script src="js/views/navMenu.js"></script>
+  <script src="js/views/navDrag.js"></script>
+  <script src="js/views/navDrop.js"></script>
+
+<!-- BACKBONE SCRIPTS -->
+  <script src="js/router.js"></script>
+  <script src="js/main.js"></script>
+
+ <!-- Style sheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+</body>
+</html>

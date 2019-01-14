@@ -1,0 +1,30 @@
+{
+  "name": "robustdesigner",
+  "version": "1.0.0",
+  "description": "UML editor for draw robustness diagramm and generate relative java-code",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JurassicSWE"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "UML",
+    "UML editor",
+    "robustness diagram",
+    "java-generator"
+  ],
+  "author": "JurassicSWE",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "archiver": "^2.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "node-zip": "^1.1.1",
+    "popper.js": "^1.14.3",
+    "serve-favicon": "^2.5.0"
+  }
+}

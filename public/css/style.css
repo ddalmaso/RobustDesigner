@@ -1,0 +1,267 @@
+/*
+* File: style.css
+* Version: 1.0
+* Type: javascript
+* Date: 2018-08-16
+* Author: Gianluca Travasci
+* E-mail: JurassicSWE@gmail.com
+*
+* License: GNU General Public License v3.0
+*
+*/
+
+body {
+  font-family: 'Montserrat', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+}
+.label {
+  font-size: 13px;
+}
+button:hover {
+    opacity: 0.8;
+}
+/* HEADER ********************************/
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-bottom: -2px;
+  width: 100%;
+  text-align: center;
+  background: #4E4949;
+  color: white;
+  font-size: 2em;
+}
+header h1 {
+  margin-top: 0em;
+}
+/* END header ********************************/
+.container {
+
+}
+/* FOOTER ********************************/
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom:0px;
+    height: 2em;
+    padding-top: 0.2em;
+    width: 100%;
+    line-height: 1.5em;
+    background: #4E4949;
+    color: white;
+    font-size: 1.2em;
+}
+
+.footer-sx, .footer-dx {
+  display: inline;
+}
+.footer-sx {
+  margin-left: 7em;
+}
+.footer-dx {
+  float: right;
+  margin-right: 7em;
+}
+/* END footer ********************************/
+
+/* HOME PAGE ********************************/
+
+/* Main Buttons */
+.dialogBtn {
+  text-align: center;
+  margin-top: 10em;
+}
+.buttonLeft {
+  margin-right: 2em;
+}
+/* END Main Buttons */
+
+/* Dialog Windows */
+#newDialog form, #loadDialog form {
+  max-width: 30%;
+}
+#entityDialog form {
+  max-width: 62%;
+}
+#newDialog label, #loadDialog label, #esportaDialog label, #entityDialog label{
+  font-size: 1.3em;
+}
+.dialogFooter {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+.dialogButton {
+  width: 100%;
+}
+
+#newDialog input[type=text], #esportaDialog input[type=text], #loadDialog input[type=file], #entityDialog input[type=file] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#newDialog .container, #loadDialog .container, #esportaDialog .container, #entityDialog .container {
+    padding: 16px;
+    max-width: 100%;
+}
+
+.modalView {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modalNone {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/* END Dialog Windows */
+/* END HOME PAGE ********************************/
+
+/* navMENU */
+.divMenu {
+  margin-bottom: 4em;
+}
+.firstLine h4, .firstLine p {
+  display: inline;
+}
+#delete {
+  margin-right: 2em;
+}
+#textA {
+  display: inline;
+  resize: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#modifica{
+  margin-left: 1em;
+}
+/* END navMenu ********************************/
+
+/* Canvas */
+.canvas {
+  width: 100%;
+  white-space: nowrap;
+}
+/**********************************/
+/* navDrag */
+.divDrag {
+  display: inline-block;
+  vertical-align: top;
+}
+#drag {
+  border: solid 1px black;
+}
+/*********************************/
+/* Drop */
+.divDrop {
+  display: inline-block;
+  vertical-align: top;
+}
+#paper {
+  border: solid 1px black;
+}
+/*********************************/
+/* Esporta dialog */
+#esportaDialog form {
+  height: 45%;
+  max-width: 50%;
+}
+#esportaDialog p {
+  font-size: 18px;
+  text-align: center;
+}
+#parent {
+  padding-top: 5px;
+  display: flex;
+}
+#narrow {
+  flex: 1;
+}
+#wide {
+  flex: 1;
+}
+.vl {
+    border-left: 1px solid black;
+    height: 130px;
+}
+/*********************************/
+/*** Entity ***/
+.addAttribute {
+  margin-bottom: 3px;
+}
+#entityList {
+  list-style-type: none;
+  overflow-y: scroll;
+  height:190px;
+  margin-left: -4em;
+}
+#entityList li {
+  border-bottom-style: solid;
+  border-bottom-color: grey;
+  border-bottom-width: 1px;
+}
+#entityList li input[type=text] {
+  width: 70px;
+}
+.w3-ul li {
+  list-style: none;
+}
+.w3-bar select, .w3-bar input {
+  border-radius: 2px;
+}
+/**************/
