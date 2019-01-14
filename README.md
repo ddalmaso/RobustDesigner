@@ -1,5 +1,4 @@
-# Ironworks-Demo - Robust Designer -> https://jurassicswe.github.io/Ironworks-App/public/
-
+# Ironworks-Demo - Robust Designer -> [Demo](https://jurassicswe.github.io/Ironworks-App/public/)
 Una volta scaricata la repository, per lanciare l'applicazione posizionarsi sopra la cartella, aprire il terminale e digitare:
 
     $ npm i
