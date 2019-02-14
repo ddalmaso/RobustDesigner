@@ -1,6 +1,6 @@
 # Ironworks-Demo - Robust Designer
 
-Progetto colleaborativo di Ingegneria del Software, a.a. 2017/2018, del corso di Informatica dell'Università di Padova.
+Progetto collaborativo di Ingegneria del Software, a.a. 2017/2018, del corso di Informatica dell'Università di Padova.
 
 Obiettivo: realizzare un editor di diagrammi UML di robustezza e un generatore di codice che, a partire dalle definizioni contenute in un diagramma, produca il codice di classi Java per ospitare i dati delle entità persistenti, ed i metodi per leggere e scrivere questi dati in un database relazionale. 
 
